@@ -1,5 +1,3 @@
-# Leetcode Exercises
-
 ![Leetcode Banner](IMG/leetcode%20banner.png)
 
 Welcome to the **Leetcode Exercises** repository! This is a collection of solutions and practice exercises from [Leetcode](https://leetcode.com/) to help enhance your problem-solving skills in **Python** and **SQL**.
