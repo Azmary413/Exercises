@@ -30,6 +30,10 @@ You are then given a student's name for whom you need to calculate and print the
 
 ---
 
+Marks for Malika {52,56,60}are whose average is
+
+52+56+60/3 = 56
+
 ## 🧪 Sample Input 0
 
 ```
@@ -87,20 +91,38 @@ if __name__ == '__main__':
     query_name = input()
     average = sum(student_marks[query_name]) / len(student_marks[query_name])
     print(f"{average:.2f}")
+
 ```
 
 ---
 
 ## 🧠 Code Breakdown
 
-- `name, *line = input().split()`  
-  Splits the first word as the student’s name and the rest as scores.
+- `if __name__ == '__main__': `
+  This line checks if the script is being executed as the main program.
 
-- `map(float, line)`  
-  Converts the score strings into float values.
+- `n = int(input()):`
+  This line reads an integer n from the input, representing the number of students.
+
+- `student_marks = {}:`
+  This line initializes an empty dictionary named student_marks to store the marks of students.
+
+- `for _ in range(n):`
+  This line starts a loop that iterates n times, prompting the user to input the marks of each student.
+
+- `name, *line = input().split()`  
+  This line reads a line of input, splits it into words, and assigns the first word to the variable name and the remaining words to the list line.
+
+  Here, *line is used for extended unpacking to capture all the remaining words into a list.
+
+- `scores = list(map(float, line)):`
+  This line converts each score in the list line to a float and stores them in a list named scores.
 
 - `student_marks[name] = scores`  
-  Adds the entry to the dictionary.
+  This line adds an entry to the student_marks dictionary where the key is the student's name (name) and the value is the list of scores (scores).
+
+- `query_name = input():`
+  This line reads the name of the student for whom we want to find the average marks.
 
 - `f"{average:.2f}"`  
   Formats the average to exactly two decimal places.
