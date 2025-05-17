@@ -1,5 +1,0 @@
-# 📝 Python____
-
-## 🧾 Problem Statement
-
----
